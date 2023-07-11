@@ -40,6 +40,21 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <!-- Build an executable JAR -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.9.3</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.microsoft.demo</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
